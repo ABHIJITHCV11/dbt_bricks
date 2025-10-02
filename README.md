@@ -44,6 +44,34 @@ This project demonstrates a data transformation workflow using dbt (data build t
     ```shell
     dbt run
     ```
+## Docker steps
+
+1. docker images
+
+💬 Comment:
+Lists all Docker images available on your local system.
+These include images you’ve pulled from Docker Hub or built locally. It shows details like repository name, tag, image ID, creation time, and size.
+
+2. docker rmi <image_id>
+
+Removes a Docker image from your local machine, specified by its image ID.
+Useful for cleaning up unused or outdated images to free up space.
+⚠️ Make sure the image is not being used by any containers before removing.
+
+3. docker build -t dbt-dbx-abhi-i1 .
+
+Builds a Docker image from the Dockerfile in the current directory (.), and tags it as dbt-dbx-abhi.
+This is how you create a custom image for your project.
+The -t flag assigns a name and optionally a tag (name:tag) to the image.
+
+4. docker run -it -v C:\prj\dbt_bricks:/app dbt-dbx-abhi-i1
+
+Runs a container based on the dbt-dbx-abhi-i1 image with:
+
+-it: Interactive terminal mode (lets you interact with the container).
+
+-v /path/to/your/dbt_project:/app: Mounts a local project directory into the container at /app. This allows the container to access your local DBT project files.
+
 
 ## Next Steps
 
