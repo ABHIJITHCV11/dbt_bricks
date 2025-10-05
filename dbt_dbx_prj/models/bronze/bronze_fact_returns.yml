@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: bronze_fact_returns
+    description: "Bronze layer: raw returns fact."
+    columns:
+      - name: sales_id
+        description: "Sales transaction ID."
+        tests:
+          - relationships:
+              to: ref('bronze_fact_sales')
+              field: sales_id
+      - name: product_sk
+        description: "Product surrogate key."
+        tests:
+          - relationships:
+              to: ref('bronze_fact_dim_product')
+              field: product_sk
+      - name: store_sk
+        description: "Store surrogate key."
+        tests:
+          - relationships:
+              to: ref('bronze_fact_dim_store')
+              field: store_sk
+      - name: date_sk
+        description: "Date surrogate key."
+        tests:
+          - relationships:
+              to: ref('bronze_dim_date')
+              field: date_sk

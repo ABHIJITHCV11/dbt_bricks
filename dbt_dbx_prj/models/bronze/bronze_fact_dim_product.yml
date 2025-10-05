@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: bronze_fact_dim_product
+    description: "Bronze layer: raw product dimension."
+    columns:
+      - name: product_sk
+        description: "Surrogate key for product."
+        tests:
+          - unique
+          - not_null
