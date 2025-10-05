@@ -1,5 +1,6 @@
 .continue/
 .logs
+dbt.log
 
 # Ignore SSH keys
 id_ed25519_personal
