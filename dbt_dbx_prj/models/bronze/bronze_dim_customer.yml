@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: bronze_dim_customer
+    description: "Bronze layer: raw customer dimension."
+    columns:
+      - name: customer_sk
+        description: "Surrogate key for customer."
+        tests:
+          - unique
+          - not_null

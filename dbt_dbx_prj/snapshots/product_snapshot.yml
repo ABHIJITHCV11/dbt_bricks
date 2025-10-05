@@ -1,0 +1,12 @@
+version: 2
+
+snapshots:
+  - name: product_snapshot
+    relation: ref('gold_product_performance')
+    config:
+      schema: snapshots
+      database: dev_abhi_catalog
+      unique_key: product_sk
+      strategy: timestamp
+      updated_at: last_purchase_date
+    description: "SCD Type 2 snapshot for product dimension. Tracks changes to product attributes over time."

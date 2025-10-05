@@ -4,7 +4,7 @@ dbt_dbx_prj:
       catalog: dev_abhi_catalog
       host: dbc-c91688ee-2639.cloud.databricks.com
       http_path: /sql/1.0/warehouses/0f16d2d89ad2501e
-      schema: source_abhi
+      schema: default
       threads: 1
       token: put ur token here
       type: databricks

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: bronze_dim_date
+    description: "Bronze layer: raw date dimension."
+    columns:
+      - name: date_sk
+        description: "Surrogate key for date."
+        tests:
+          - unique
+          - not_null

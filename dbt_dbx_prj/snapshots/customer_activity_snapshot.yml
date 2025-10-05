@@ -1,0 +1,11 @@
+version: 2
+
+snapshots:
+  - name: customer_activity_snapshot
+    relation: ref('gold_customer_activity')
+    config:
+      schema: snapshots
+      unique_key: customer_sk
+      strategy: timestamp
+      updated_at: last_purchase_date
+    description: "SCD Type 2 snapshot for customer activity, tracking changes in customer metrics over time."

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: bronze_fact_dim_store
+    description: "Bronze layer: raw store dimension."
+    columns:
+      - name: store_sk
+        description: "Surrogate key for store."
+        tests:
+          - unique
+          - not_null

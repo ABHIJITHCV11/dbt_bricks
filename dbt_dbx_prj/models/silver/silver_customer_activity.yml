@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: silver_customer_activity
+    description: "Customer-level activity metrics."
+    columns:
+      - name: customer_sk
+        description: "Surrogate key for customer."
+      - name: first_name
+        description: "Customer's first name."
+      - name: last_name
+        description: "Customer's last name."
+      - name: total_purchases
+        description: "Total number of purchases."
+      - name: total_spent
+        description: "Total amount spent by the customer."
